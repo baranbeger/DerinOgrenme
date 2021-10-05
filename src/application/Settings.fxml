@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingsController">
+   <children>
+      <Label layoutX="122.0" layoutY="23.0" prefHeight="21.0" prefWidth="119.0" text="Settings Page" textFill="#9e1b1b">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="104.0" prefHeight="17.0" prefWidth="88.0" text="Learning rate:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="141.0" prefHeight="17.0" prefWidth="88.0" text="Batchsize:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="182.0" prefHeight="19.0" prefWidth="109.0" text="Percentage split:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="226.0" prefHeight="19.0" prefWidth="109.0" text="Seed:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="304.0" prefHeight="19.0" prefWidth="109.0" text="Backprop:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="265.0" prefHeight="19.0" prefWidth="109.0" text="Epoch:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="346.0" prefHeight="19.0" prefWidth="109.0" text="Pretrain:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtLR" layoutX="164.0" layoutY="101.0" prefHeight="25.0" prefWidth="136.0" />
+      <TextField fx:id="txtBS" layoutX="164.0" layoutY="138.0" prefHeight="25.0" prefWidth="136.0" />
+      <TextField fx:id="txtPS" layoutX="164.0" layoutY="179.0" prefHeight="25.0" prefWidth="136.0" />
+      <TextField fx:id="txtSeed" layoutX="164.0" layoutY="223.0" prefHeight="25.0" prefWidth="136.0" />
+      <TextField fx:id="txtEpoch" layoutX="164.0" layoutY="262.0" prefHeight="25.0" prefWidth="136.0" />
+      <JFXCheckBox fx:id="chkBackProp" layoutX="164.0" layoutY="305.0" onAction="#fonkchkBackProp" prefHeight="19.0" prefWidth="70.0" text="True" textFill="#9c3287" unCheckedColor="#9e3490">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="chkPretrain" layoutX="164.0" layoutY="346.0" onAction="#fonkchkPretrain" prefHeight="19.0" prefWidth="70.0" text="True" textFill="#9c3287" unCheckedColor="#9e3490">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXButton fx:id="idBtn" layoutX="122.0" layoutY="510.0" onAction="#fonkOK" prefHeight="25.0" prefWidth="88.0" ripplerFill="#971a78" text="OK" textFill="#8a1a1a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblWidth" layoutX="35.0" layoutY="414.0" prefHeight="19.0" prefWidth="70.0" text="Width" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHeigth" layoutX="35.0" layoutY="442.0" prefHeight="19.0" prefWidth="70.0" text="Height" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblClassCount" layoutX="14.0" layoutY="474.0" prefHeight="19.0" prefWidth="76.0" text="Class Count" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtWidth" layoutX="90.0" layoutY="411.0" prefHeight="25.0" prefWidth="61.0" />
+      <TextField fx:id="txtHeight" layoutX="90.0" layoutY="439.0" prefHeight="25.0" prefWidth="61.0" />
+      <TextField fx:id="txtClassCount" layoutX="90.0" layoutY="471.0" prefHeight="25.0" prefWidth="61.0" />
+      <Label fx:id="lblTraining" layoutX="165.0" layoutY="414.0" prefHeight="19.0" prefWidth="102.0" text="Training count:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTrainingCount" layoutX="283.0" layoutY="411.0" prefHeight="25.0" prefWidth="61.0" />
+      <TextField fx:id="txtTestingCount" layoutX="283.0" layoutY="439.0" prefHeight="25.0" prefWidth="61.0" />
+      <Label fx:id="lblTesting" layoutX="166.0" layoutY="442.0" prefHeight="19.0" prefWidth="102.0" text="Testing count:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="isrgb" layoutX="34.0" layoutY="378.0" prefHeight="19.0" prefWidth="109.0" text="Is rgb:" textFill="#a12482">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <JFXCheckBox fx:id="chkRgb" layoutX="164.0" layoutY="378.0" onAction="#fonkchkRgb" prefHeight="19.0" prefWidth="70.0" text="True" textFill="#9c3287" unCheckedColor="#9e3490">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXCheckBox>
+   </children>
+</AnchorPane>

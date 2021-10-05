@@ -1,0 +1,92 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>DerinOgrenme</groupId>
+  <artifactId>DerinOgrenme</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>11</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+   <properties>
+    <dl4j.version>1.0.0-alpha</dl4j.version>
+</properties>
+  
+  <dependencies>
+  	<!-- https://mvnrepository.com/artifact/org.deeplearning4j/deeplearning4j-core -->
+<dependency>
+    <groupId>org.deeplearning4j</groupId>
+    <artifactId>deeplearning4j-core</artifactId>
+    <version>${dl4j.version}</version>
+</dependency>
+  	<!-- https://mvnrepository.com/artifact/org.nd4j/nd4j-api -->
+<dependency>
+    <groupId>org.nd4j</groupId>
+    <artifactId>nd4j-native-platform</artifactId>
+    <version>${dl4j.version}</version>
+</dependency>
+  	<dependency>
+    <groupId>com.jfoenix</groupId>
+    <artifactId>jfoenix</artifactId>
+    <version>9.0.10</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+<dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.11.1</version>
+</dependency>
+
+
+	<dependency>
+			<groupId>org.controlsfx</groupId>
+			<artifactId>controlsfx</artifactId>
+			<version>8.40.14</version>
+		</dependency>
+  	<!-- https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/LibSVM -->
+		<dependency>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>LibSVM</artifactId>
+			<version>1.0.10</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>weka-stable</artifactId>
+			<version>3.8.4</version>
+		</dependency>
+		<dependency>
+    <groupId>org.apache.cassandra</groupId>
+    <artifactId>cassandra-all</artifactId>
+    <version>1.1.4</version>
+
+    <exclusions>
+        <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </exclusion>
+    </exclusions>
+
+</dependency>
+		
+  </dependencies>
+</project>
